@@ -6,7 +6,7 @@ M.setup = function(opts)
 		local lstart = args.line1
 		local lend = args.line2
 		for line = lstart, lend do
-			vim.api.nvim_win_set_cursor(0, { line, 1 })
+			vim.api.nvim_win_set_cursor(0, { line, 100 }) -- Find a way to fix 100, and get instead first or last character in the line
 			M.toggle_checkbox()
 		end
 	end, { range = true, desc = "Toggle checkbox in markdown files" })
